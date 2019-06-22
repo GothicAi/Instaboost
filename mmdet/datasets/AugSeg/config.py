@@ -12,6 +12,8 @@ class AugSegConfig:
         :param dx: the maximum x-axis shift will be  (instance width) / dx
         :param dy: the maximum y-axis shift will be  (instance height) / dy
         :param theta: tuple of (min rotation degree, max rotation degree)
+        :param color_prob: the probability of images for color augmentation
+        :param heatmap_flag: whether to use heatmap guided
         """
         assert len(action_candidate) == len(action_prob), 'Candidate & probability length mismatch'
         assert np.sum(action_prob) == 1, 'Probability must sum to 1'
