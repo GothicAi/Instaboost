@@ -1,64 +1,77 @@
 # InstaBoost
 
-This repository is implementation of InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch). 
+A python implementation for paper: "**InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting**". The code has been released on PyPI for easier installation and implementation. 
 
-## MMdetection Framework Quick Start
-
-1. Enter 'mmdetection/' folder. 
-
-2. Requirements  
-We implement our method on Python 3.5. Other versions of Python 3.4+ should work with following packages:
+## Install
 
 ```
-Cython
-opencv-python
-Pillow
-pycocotools
-pytorch 1.0
-scikit-image
-scipy
+pip install InstaBoost
 ```
 
-3. Build matting module
+Only tested on python3 and Linux. Windows is not supported since pycocotools do not support Windows. 
+
+## Get Started
+
+There are two main interface in **InstaBoost**.
+
+### **InstaBoostConfig**
 
 ```
-cd mmdet/datasets
-sh matting_init.sh
+cfg = InstaBoostConfig(action_candidate: tuple,
+                       action_prob: tuple, 
+                       scale: tuple, 
+                       dx: float, 
+                       dy: float,
+                       theta: tuple, 
+                       color_prob: float, 
+                       heatmap_flag: bool)
 ```
+Parameters: 
 
-4. Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). 
+**action_candidate:** tuple of action candidates. 'normal', 'horizontal', 'vertical', 'skip' are supported
 
-5. Move the matting module, named like opencv_mat.cpython-35m-x86_64-linux-gnu.so, to where mmdetection package is installed. For example, I use conda to create an environment called 'mmtest', then I should move the module to 'PATH_TO_CONDA/anaconda3/envs/mmtest/lib/python3.5/site-packages/mmdet-0.6.0+53c647e-py3.5.egg/mmdet/datasets/AugSeg/global_matting'.
+**action_prob:** tuple of corresponding action probabilities. Should be the same length as action_candidate
 
-6. Train or test models according to [mmdetection/README.md](mmdetection/README.md). 
+**scale:** tuple of (min scale, max scale)
 
-## Detectron Framework Quick Start
+**dx:** the maximum x-axis shift will be  (instance width) / dx
 
-1. Enter 'detectron/' folder. 
+**dy:** the maximum y-axis shift will be  (instance height) / dy
 
-2. Requirements  
-We implement our method on Python 3.5. Besides packages shown in [detectron/README.md](detectron/README.md), following packages are also needed:
+**theta:** tuple of (min rotation degree, max rotation degree)
+
+**color_prob:** the probability of images for color augmentation
+
+**heatmap_flag:** whether to use heatmap guided
+
+Output:
+
+**cfg:** a InstaBoostConfig instance
+
+### **get_new_data**
 
 ```
-Pillow
-scikit-image
-scipy
+new_ann, new_img = get_new_data(ori_anns: list, 
+                                ori_img: np.ndarray, 
+                                config: InstaBoostConfig, 
+                                background: np.ndarray)
 ```
+Parameters: 
 
-3. Build matting module
+**ori_anns:** list of coco-style annotation dicts
 
-```
-cd detectron/lib
-sh matting_init.sh
-```
+**ori_img:** image corresponding to ori_anns
 
-4. Prepare and run detectron according to [detectron/README.md](detectron/README.md). 
+**config:** a InstaBoostConfig instance. If None, the default parameters will be used
 
+**background:** if not None, this background image will be used for augmentation
 
-## Configurations
+Output:
 
-Configurations for InstaBoost can be set up in [mmdet/datasets/AugSeg/config.py](mmdetection/mmdet/datasets/AugSeg/config.py) and [detectron/lib/AugSeg/config.py](detectron/lib/AugSeg/config.py). More details are shown in comments. 
+**new_ann:** ori_anns after augmentation without changes in length of list or keys of dicts
 
-## Acknowledgement
+**new_img:** ori_img after augmentation without changes in shape
 
-Our detection and instance segmentation framework is based on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
+## Samples and models
+
+We show how to implement our method on two main segmentation frameworks: [Detectron](https://github.com/roytseng-tw/Detectron.pytorch) and [mmdetection](https://github.com/open-mmlab/mmdetection) in repo [InstaBoost-sample](https://github.com/GothicAi/Instaboost). Results and models trained with InstaBoost are available in the [Model zoo](MODEL_ZOO.md).
