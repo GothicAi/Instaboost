@@ -25,6 +25,15 @@ To change InstaBoost Configurations, users can use function [`InstaBoostConfig`]
 
 Results and models are available in the [Model zoo](MODEL_ZOO.md).
 
+## Citation
+
+If you use this toolbox or benchmark in your research, please cite this project.
+
+```
+???
+```
+
+
 ## Acknowledgement
 
 Our detection and instance segmentation framework is based on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
