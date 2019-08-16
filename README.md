@@ -30,7 +30,12 @@ Results and models are available in the [Model zoo](MODEL_ZOO.md).
 If you use this toolbox or benchmark in your research, please cite this project.
 
 ```
-???
+@inproceedings{Fang2019InstaBoost,
+author = {Fang, Hao-Shu and Sun, Jianhua and Wang, Runzhong and and Gou, Minghao and Li, Yonglu and Lu, Cewu},
+title = {InstaBoost: Boosting Instance Segmentation Via Probability Map GuidedCopy-Pasting},
+booktitle = {ICCV},
+year = {2019}
+}
 ```
 
 
