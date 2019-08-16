@@ -5,8 +5,7 @@ from core.config import cfg
 import utils.blob as blob_utils
 import roi_data.rpn
 
-from AugSeg import get_new_data
-from AugSeg import AugSegConfig
+from InstaBoost import get_new_data, InstaBoostConfig
 from datasetsAug.roidb import combined_roidb_for_training
 from PIL import Image, ImageEnhance, ImageOps, ImageFile
 
@@ -61,30 +60,17 @@ def _get_image_blob(roidb, coco):
     for i in range(num_images):
         im = cv2.imread(roidb[i]['image'])
         assert im is not None, \
-            'Failed to read image \'{}\''.format(roidb[i]['image'])            
+            'Failed to read image \'{}\''.format(roidb[i]['image'])   
+
         # AUG BEGIN--------------------------------
-        '''
-        color_flag = np.random.choice([0,1],p=[0.5, 0.5])
-        if color_flag:
-            PIL_img = Image.fromarray(cv2.cvtColor(im,cv2.COLOR_BGR2RGB))
-            PIL_img = randomColor(PIL_img)
-            im = cv2.cvtColor(np.asarray(PIL_img),cv2.COLOR_RGB2BGR)
-        '''
-        aug_flag = np.random.choice([0,1],p=[0.5,0.5])#选取部分数据去aug
+        aug_flag = np.random.choice([0,1],p=[0.5,0.5])
         if aug_flag:
             img_id = roidb[i]['id']
             ann_ids = coco.getAnnIds(imgIds=img_id)
             anns = coco.loadAnns(ann_ids)
-
-            #background_path = "/BigDisk/jianhua/dataset/inpaintingData/cocoBackground/train2017/"#背景路径
-            img_name = roidb[i]['image'][-16:]
-            #background = cv2.imread(background_path+img_name)
-            
+                        
             new_ann, im = get_new_data(anns, im, None, background=None)
-            #new_im_path = "/BigDisk/jianhua/AugSeg/train/new_img/"
-            #ori_im_path = "/BigDisk/jianhua/AugSeg/train/ori_img/"
             if new_ann and new_ann[0]:
-                #cv2.imwrite(new_im_path+img_name, im)
                 try:
                     new_roidb, ratio_list, ratio_index = combined_roidb_for_training( \
                         ('coco_2017_train',), cfg.TRAIN.PROPOSAL_FILES, \
@@ -97,9 +83,6 @@ def _get_image_blob(roidb, coco):
                             roidb[i] = new_roidb[0]
                 except IndexError:
                     print("Index error")
-        #else:
-            #cv2.imwrite(ori_im_path+img_name, im)
-        
         # AUG END----------------------------------
         # If NOT using opencv to read in images, uncomment following lines
         # if len(im.shape) == 2:
@@ -121,18 +104,3 @@ def _get_image_blob(roidb, coco):
     blob = blob_utils.im_list_to_blob(processed_ims)
 
     return blob, im_scales, roidb
-
-def randomColor(image):
-        """
-        对图像进行颜色抖动
-        :param image: PIL的图像image
-        :return: 有颜色色差的图像image
-        """
-        random_factor = np.random.randint(0, 31) / 10.  # 随机因子
-        color_image = ImageEnhance.Color(image).enhance(random_factor)  # 调整图像的饱和度
-        random_factor = np.random.randint(10, 21) / 10.  # 随机因子
-        brightness_image = ImageEnhance.Brightness(color_image).enhance(random_factor)  # 调整图像的亮度
-        random_factor = np.random.randint(10, 21) / 10.  # 随机因子
-        contrast_image = ImageEnhance.Contrast(brightness_image).enhance(random_factor)  # 调整图像对比度
-        random_factor = np.random.randint(0, 31) / 10.  # 随机因子
-        return ImageEnhance.Sharpness(contrast_image).enhance(random_factor)  # 调整图像锐度

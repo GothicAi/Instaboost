@@ -1,63 +1,29 @@
 # InstaBoost
 
-This repository is implementation of InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch). 
+This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting" on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) framework. 
 
-## MMdetection Framework Quick Start
+## Common Settings and Quick Start
 
-1. Enter 'mmdetection/' folder. 
-
-2. Requirements  
-We implement our method on Python 3.5. Other versions of Python 3.4+ should work with following packages:
+1. Requirements  
+We implement our method on Python 3.5. To install InstaBoost, use this command. 
 
 ```
-Cython
-opencv-python
-Pillow
-pycocotools
-pytorch 1.0
-scikit-image
-scipy
+pip install InstaBoost
 ```
 
-3. Build matting module
+2. Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). Train or test models according to [mmdetection/README.md](mmdetection/README.md). 
 
-```
-cd mmdet/datasets
-sh matting_init.sh
-```
+3. Prepare and run detectron according to [detectron/README.md](detectron/README.md).  
 
-4. Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). 
+* Since these two frameworks may continue updating, codes in this repo may be a little different from [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
 
-5. Move the matting module, named like opencv_mat.cpython-35m-x86_64-linux-gnu.so, to where mmdetection package is installed. For example, I use conda to create an environment called 'mmtest', then I should move the module to 'PATH_TO_CONDA/anaconda3/envs/mmtest/lib/python3.5/site-packages/mmdet-0.6.0+53c647e-py3.5.egg/mmdet/datasets/AugSeg/global_matting'.
+## Setup InstaBoost Configurations
 
-6. Train or test models according to [mmdetection/README.md](mmdetection/README.md). 
+To change InstaBoost Configurations, users can use function [`InstaBoostConfig`](https://github.com/GothicAi/InstaBoost-pypi#instaboostconfig).
 
-## Detectron Framework Quick Start
+## Model Zoo
 
-1. Enter 'detectron/' folder. 
-
-2. Requirements  
-We implement our method on Python 3.5. Besides packages shown in [detectron/README.md](detectron/README.md), following packages are also needed:
-
-```
-Pillow
-scikit-image
-scipy
-```
-
-3. Build matting module
-
-```
-cd detectron/lib
-sh matting_init.sh
-```
-
-4. Prepare and run detectron according to [detectron/README.md](detectron/README.md). 
-
-
-## Configurations
-
-Configurations for InstaBoost can be set up in [mmdet/datasets/AugSeg/config.py](mmdetection/mmdet/datasets/AugSeg/config.py) and [detectron/lib/AugSeg/config.py](detectron/lib/AugSeg/config.py). More details are shown in comments. 
+Results and models are available in the [Model zoo](MODEL_ZOO.md).
 
 ## Acknowledgement
 
