@@ -1,6 +1,6 @@
 # InstaBoost
 
-This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting" on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) framework. 
+This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting" on [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) framework. 
 
 ## Common Settings and Quick Start
 
@@ -15,7 +15,7 @@ pip install InstaBoost
 
 3. Prepare and run detectron according to [detectron/README.md](detectron/README.md).  
 
-* Since these two frameworks may continue updating, codes in this repo may be a little different from [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
+* Since these two frameworks may continue updating, codes in this repo may be a little different from [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
 
 ## Setup InstaBoost Configurations
 
