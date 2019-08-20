@@ -363,8 +363,7 @@ def main():
     ### Training Loop ###
     maskRCNN.train()
 
-    #CHECKPOINT_PERIOD = int(cfg.TRAIN.SNAPSHOT_ITERS / cfg.NUM_GPUS)
-    CHECKPOINT_PERIOD = 5000
+    CHECKPOINT_PERIOD = int(cfg.TRAIN.SNAPSHOT_ITERS / cfg.NUM_GPUS)
    
      # Set index for decay steps
     decay_steps_ind = None
