@@ -25,11 +25,19 @@ and adding
 
 ## Configurations
 
-4x configurations are in [mmdet/InstaBoost_configs](mmdet/InstaBoost_configs).
+4x configurations are available in [mmdet/InstaBoost_configs](mmdet/InstaBoost_configs).
 
 ## Results and models
 
-Some results can be seen in [MODEL_ZOO](https://github.com/GothicAi/Instaboost/blob/master/MODEL_ZOO.md).
+|    InstaBoost   |     Network     |       Backbone       | Lr schd |      box AP       |      mask AP       |      Download       |
+| :-------------: | :-------------: |      :--------:      | :-----: |      :----:       |      :-----:       | :-----------------: |
+|   ×   |    Mask R-CNN   |   X-101-64x4d-FPN    |   4x    |  42.1  |  38.0   | - |
+|   √   |    Mask R-CNN   |   X-101-64x4d-FPN    |   4x    |  44.5  |  39.5   |[Baidu](https://pan.baidu.com/s/1KrHQBHcHjWONpXbC2qUzxw) / [Google](https://drive.google.com/file/d/1qD4V9uYbtpaZBmTMTgP7f0uw46zroY9-/view?usp=sharing)|
+|   ×   |  Cascade R-CNN  |       R-101-FPN      |   4x    |  42.6  |  37.0   | - |
+|   √   |  Cascade R-CNN  |       R-101-FPN      |   4x    |  45.4  |  39.2   |[Baidu](https://pan.baidu.com/s/1_4cJ0B9fugcA-oBHYe9o_A) / [Google](https://drive.google.com/file/d/1xhiuFoOMQyDIvOrz6MiAZPboRRe1YK8p/view?usp=sharing)|
+|   ×   |  Cascade R-CNN  |   X-101-64x4d-FPN    |   4x    |  45.4  |  39.1   | - |
+|   √   |  Cascade R-CNN  |   X-101-64x4d-FPN    |   4x    |  47.2  |  40.4   |[Baidu](https://pan.baidu.com/s/1nu73IpRbTEb4caPMHWJMXA) / [Google](https://drive.google.com/file/d/11iaKH-ZeVCi-65wzlT5OxxUOkREMzXRW/view?usp=sharing)|
+
 
 ## Citation
 
