@@ -6,11 +6,10 @@ Codes in this folder is an implementation of InstaBoost for detectron of [this v
 
 Since loading images and packaging annotations into roidb are in different stages in this code, implementing InstaBoost is a little complex. 
 
-Main codes are in [lib/roi_data/minibatch.py](https://github.com/GothicAi/Instaboost/blob/master/detectron/lib/roi_data/minibatch.py#L65L86). These codes do mainly do three works, fetch image and annotations, InstaBoost, and package annotations inot roidb. 
+Main codes are in [lib/roi_data/minibatch.py](lib/roi_data/minibatch.py#L66L87). These codes do mainly do three works, fetch image and annotations, InstaBoost, and package annotations inot roidb. 
 
 First two steps are easy to understand, while the third step might be confusing. We try to use `combined_roidb_for_training` function provided in [lib/datasets/roidb.py](lib/datasets/roidb.py#L37) to get new roidbs which are consistent with the previous ones. Therefore, we need to passing parameters `img_id`, `new_ann`, `coco` to infer a certain image and annotaion of the coco-style dataset we use before. We make a copy of lib/dataset folder, called lib/datasetAug, and changes some codes. Details are shown below.
 
-Meanwhile, to passing parameter `coco` from 
 
 
 ## Configurations
