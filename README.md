@@ -11,9 +11,9 @@ We implement our method on Python 3.5. To install InstaBoost, use this command.
 pip install InstaBoost
 ```
 
-2. Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). Train or test models according to [mmdetection/README.md](mmdetection/README.md). 
+2. Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). Train or test models according to [mmdetection/ORIREADME.md](mmdetection/ORIREADME.md). 
 
-3. Prepare and run detectron according to [detectron/README.md](detectron/README.md).  
+3. Prepare and run detectron according to [detectron/ORIREADME.md](detectron/ORIREADME.md).  
 
 * Since these two frameworks may continue updating, codes in this repo may be a little different from [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
 

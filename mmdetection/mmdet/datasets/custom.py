@@ -186,7 +186,7 @@ class CustomDataset(Dataset):
                 scores = None
 
         #ann = self.get_ann_info(idx)
-        #------------------------spread function get_ann_info------------------------------
+        #------------------------expand function get_ann_info------------------------------
         img_id = self.img_infos[idx]['id']
         ann_ids = self.coco.getAnnIds(imgIds=[img_id])
         ann_info = self.coco.loadAnns(ann_ids)
@@ -196,7 +196,7 @@ class CustomDataset(Dataset):
             ann_info, img = get_new_data(ann_info, img, None, background=None)
         #------------------------AUG END---------------------------------------------------
         ann = self._parse_ann_info(ann_info, self.with_mask)
-        #------------------------spread function get_ann_info------------------------------
+        #------------------------expand function get_ann_info------------------------------
 
         gt_bboxes = ann['bboxes']
         gt_labels = ann['labels']
