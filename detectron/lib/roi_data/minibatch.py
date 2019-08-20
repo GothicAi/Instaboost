@@ -7,7 +7,8 @@ import roi_data.rpn
 
 from InstaBoost import get_new_data, InstaBoostConfig
 from datasetsAug.roidb import combined_roidb_for_training
-from PIL import Image, ImageEnhance, ImageOps, ImageFile
+from pycocotools.coco import COCO
+coco = COCO('data/coco/annotations/instances_train2017.json')
 
 def get_minibatch_blob_names(is_training=True):
     """Return blob names in the order in which they are read by the data loader.
@@ -27,14 +28,14 @@ def get_minibatch_blob_names(is_training=True):
     return blob_names
 
 
-def get_minibatch(roidb, coco):
+def get_minibatch(roidb):
     """Given a roidb, construct a minibatch sampled from it."""
     # We collect blobs from each image onto a list and then concat them into a
     # single tensor, hence we initialize each blob to an empty list
     blobs = {k: [] for k in get_minibatch_blob_names()}
 
     # Get the input image blob
-    im_blob, im_scales, roidb = _get_image_blob(roidb, coco)
+    im_blob, im_scales, roidb = _get_image_blob(roidb)
     blobs['data'] = im_blob
     if cfg.RPN.RPN_ON:
         # RPN-only or end-to-end Faster/Mask R-CNN
@@ -47,7 +48,7 @@ def get_minibatch(roidb, coco):
     return blobs, valid
 
 
-def _get_image_blob(roidb, coco):
+def _get_image_blob(roidb):
     """Builds an input blob from the images in the roidb at the specified
     scales.
     """

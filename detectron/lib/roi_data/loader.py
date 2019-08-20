@@ -15,19 +15,16 @@ import utils.blob as blob_utils
 
 
 class RoiDataLoader(data.Dataset):
-    def __init__(self, roidb, num_classes, coco, training=True):
+    def __init__(self, roidb, num_classes, training=True):
         self._roidb = roidb
         self._num_classes = num_classes
         self.training = training
         self.DATA_SIZE = len(self._roidb)
 
-        # ADD----------------
-        self.coco = coco
-
     def __getitem__(self, index_tuple):
         index, ratio = index_tuple
         single_db = [self._roidb[index]]
-        blobs, valid = get_minibatch(single_db, self.coco)
+        blobs, valid = get_minibatch(single_db)
         #TODO: Check if minibatch is valid ? If not, abandon it.
         # Need to change _worker_loop in torch.utils.data.dataloader.py.
 

@@ -241,13 +241,9 @@ def main():
         batch_size=args.batch_size,
         drop_last=True
     )
-    # ADD-------------------
-    from pycocotools.coco import COCO
-    coco = COCO('data/coco/annotations/instances_train2017.json')
     dataset = RoiDataLoader(
         roidb,
         cfg.MODEL.NUM_CLASSES,
-        coco,
         training=True)
     dataloader = torch.utils.data.DataLoader(
         dataset,
