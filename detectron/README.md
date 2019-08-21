@@ -6,10 +6,15 @@ Codes in this folder is an implementation of InstaBoost for detectron of [this v
 
 Since loading images and packaging annotations into roidb are in different stages in this code, implementing InstaBoost is a little complex. 
 
-Main codes are in [lib/roi_data/minibatch.py](lib/roi_data/minibatch.py#L66L87). These codes do mainly do three works, fetch image and annotations, InstaBoost, and package annotations inot roidb. 
+Main codes are in [lib/roi_data/minibatch.py](lib/roi_data/minibatch.py#L66L87). These codes mainly do three works, fetch image and annotations, InstaBoost, and package annotations into roidb. 
 
-First two steps are easy to understand, while the third step might be confusing. We try to use `combined_roidb_for_training` function provided in [lib/datasets/roidb.py](lib/datasets/roidb.py#L37) to get new roidbs which are consistent with the previous ones. Therefore, we need to passing parameters `img_id`, `new_ann`, `coco` to infer a certain image and annotaion of the coco-style dataset we use before. We make a copy of lib/dataset folder, called lib/datasetAug, and changes some codes. Details are shown below.
+First two steps are easy to understand, while the third step might be confusing. We try to reuse `combined_roidb_for_training` function provided in [lib/datasets/roidb.py](lib/datasets/roidb.py#L37) to get new roidbs which are consistent with the previous ones. Therefore, we need to passing parameters `img_id`, `new_ann`, `coco` to infer a certain image and annotaion of the coco-style dataset we use before. We make a copy of lib/dataset folder, called lib/datasetAug, and changes some codes. Details are shown below.
 
+[Line 8 - line 11](lib/roi_data/minibatch.py#L8-L11) in lib/roi_data/minibatch.py to import packages and load coco annotations. 
+
+[Line 37](lib/datasetsAug/roidb.py#L37), [line 42](lib/datasetsAug/roidb.py#L42), [line 43](lib/datasetsAug/roidb.py#L43) and [line 63](lib/datasetsAug/roidb.py#L63) in lib/datasetsAug/roidb.py to pass parameter `coco`. 
+
+[Line 56](lib/datasetsAug/json_dataset.py#L56), [line 70](lib/datasetsAug/json_dataset.py#L70), [line 89 - line 90](lib/datasetsAug/json_dataset.py#L89L90), [line 136 - line 142](lib/datasetsAug/json_dataset.py#L136L142), [line 147 - line 171](lib/datasetsAug/json_dataset.py#L147L171) and [line 222 - line 223](lib/datasetsAug/json_dataset.py#L222L223) in lib/datasetsAug/json_dataset.py to pass parameter `coco`, `img_id`, `new_ann` to replace these variables in original code. 
 
 
 ## Configurations
