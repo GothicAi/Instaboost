@@ -1,6 +1,6 @@
 # InstaBoost
 
-This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting" on [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) framework. 
+This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting" on [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) framework. Our paper has been released on arXiv https://arxiv.org/abs/1908.07801. 
 
 ## Common Settings and Quick Start
 
@@ -30,10 +30,10 @@ Results and models are available in the [Model zoo](MODEL_ZOO.md).
 If you use this toolbox or benchmark in your research, please cite this project.
 
 ```
-@inproceedings{Fang2019InstaBoost,
+@article{Fang2019InstaBoost,
 author = {Fang, Hao-Shu and Sun, Jianhua and Wang, Runzhong and Gou, Minghao and Li, Yonglu and Lu, Cewu},
 title = {InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting},
-booktitle = {ICCV},
+journal={arXiv preprint arXiv:1908.07801},
 year = {2019}
 }
 ```
