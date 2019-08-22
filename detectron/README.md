@@ -19,7 +19,7 @@ First two steps are easy to understand, while the third step might be confusing.
 
 ## Configurations
 
-4x configurations are available in [detectron/InstaBoost_configs](detectron/InstaBoost_configs).
+4x configurations are available in [InstaBoost_configs](InstaBoost_configs).
 
 ## Results and models
 
