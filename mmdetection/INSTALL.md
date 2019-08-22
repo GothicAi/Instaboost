@@ -15,7 +15,7 @@ a. Install PyTorch 1.0 and torchvision following the [official instructions](htt
 b. Clone the mmdetection repository.
 
 ```shell
-git clone https://github.com/open-mmlab/mmdetection.git
+git clone https://github.com/GothicAi/Instaboost.git
 ```
 
 c. Compile cuda extensions.
