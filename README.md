@@ -23,7 +23,7 @@ To change InstaBoost Configurations, users can use function [`InstaBoostConfig`]
 
 ## Model Zoo
 
-Results and models are available in the [Model zoo](MODEL_ZOO.md).
+Results and models are available in the [Model zoo](MODEL_ZOO.md). 
 
 ## Citation
 

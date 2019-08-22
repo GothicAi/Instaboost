@@ -29,6 +29,8 @@ and adding
 
 ## Results and models
 
+For your conveinience of evaluation and comparison, we report the evaluation number on COCO val below. In our paper, the numbers are obtained from test-dev.
+
 |    InstaBoost   |     Network     |       Backbone       | Lr schd |      box AP       |      mask AP       |      Download       |
 | :-------------: | :-------------: |      :--------:      | :-----: |      :----:       |      :-----:       | :-----------------: |
 |   ×   |    Mask R-CNN   |   X-101-64x4d-FPN    |   1x    |  42.1  |  38.0   | - |

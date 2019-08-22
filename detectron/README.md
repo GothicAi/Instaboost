@@ -1,4 +1,4 @@
-# InstaBoost on mmdetection
+# InstaBoost on detectron
 
 Codes in this folder is an implementation of InstaBoost for detectron of [this version](https://github.com/roytseng-tw/Detectron.pytorch/tree/8315af319cd29b8884a7c0382c4700a96bf35bbc).
 
@@ -22,6 +22,8 @@ First two steps are easy to understand, while the third step might be confusing.
 4x configurations are available in [detectron/InstaBoost_configs](detectron/InstaBoost_configs).
 
 ## Results and models
+
+For your conveinience of evaluation and comparison, we report the evaluation number on COCO val below. In our paper, the numbers are obtained from test-dev.
 
 |    InstaBoost   |     Network     |       Backbone       | Lr schd |      box AP       |      mask AP       |      Download       |
 | :-------------: | :-------------: |      :--------:      | :-----: |      :----:       |      :-----:       | :-----------------: |
