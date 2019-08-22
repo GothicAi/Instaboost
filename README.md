@@ -41,7 +41,7 @@ If you use this toolbox or benchmark in your research, please cite this project.
 
 ```
 @article{Fang2019InstaBoost,
-author = {Fang, Hao-Shu and Sun, Jianhua and Wang, Runzhong and Gou, Minghao and Li, Yonglu and Lu, Cewu},
+author = {Fang, Hao-Shu and Sun, Jianhua and Wang, Runzhong and Gou, Minghao and Li, Yong-Lu and Lu, Cewu},
 title = {InstaBoost: Boosting Instance Segmentation Via Probability Map Guided Copy-Pasting},
 journal={arXiv preprint arXiv:1908.07801},
 year = {2019}
