@@ -37,6 +37,7 @@ booktitle = {ICCV},
 year = {2019}
 }
 ```
+Please also cite [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) if you use the corresponding codes.
 
 
 ## Acknowledgement
