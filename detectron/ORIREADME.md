@@ -1,5 +1,3 @@
-**Use this instead: https://github.com/facebookresearch/maskrcnn-benchmark**
-
 # A Pytorch Implementation of Detectron
 
 [![Build Status](https://travis-ci.com/roytseng-tw/Detectron.pytorch.svg?branch=master)](https://travis-ci.com/roytseng-tw/Detectron.pytorch)
@@ -53,7 +51,8 @@ This implementation has the following features:
 Clone the repo:
 
 ```
-git clone https://github.com/roytseng-tw/mask-rcnn.pytorch.git
+git clone https://github.com/GothicAi/Instaboost.git
+cd detectron
 ```
 
 ### Requirements
