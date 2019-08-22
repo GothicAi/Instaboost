@@ -2,6 +2,10 @@
 
 Codes in this folder is an implementation of InstaBoost for [mmdetection v0.6.0](https://github.com/open-mmlab/mmdetection/tree/v0.6.0).
 
+## Installation, Training, Testing
+
+Install mmdetection according to [INSTALL.md](INSTALL.md). Train or test models according to [ORIREADME.md](ORIREADME.md).
+
 ## Implementation
 
 Users can simply implement InstaBoost on mmdetection framework by changing [codes](mmdet/datasets/custom.py#L188L199) in [mmdet/datasets/custom.py](mmdet/datasets/custom.py), after import InstaBoost [here](mmdet/datasets/custom.py#L13).
