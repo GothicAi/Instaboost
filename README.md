@@ -17,9 +17,9 @@ The detail implementation can be found [`here`](https://github.com/GothicAi/Inst
 
 Currently we have integrated InstaBoost into two open implementations: [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
 
-* **mmdetection:** Checkout [mmdetection](mmdetection). Install mmdetection according to [mmdetection/INSTALL.md](mmdetection/INSTALL.md). Train or test models according to [mmdetection/ORIREADME.md](mmdetection/ORIREADME.md). 
+* **mmdetection:** Checkout [mmdetection](mmdetection).  
 
-* **detectron:** Checkout [detectron](detectron). Prepare and run detectron according to [detectron/ORIREADME.md](detectron/ORIREADME.md).  
+* **detectron:** Checkout [detectron](detectron). 
 
 *Since these two frameworks may continue updating, codes in this repo may be a little different from their current repo.*
 
