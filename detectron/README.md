@@ -2,6 +2,10 @@
 
 Codes in this folder is an implementation of InstaBoost for detectron of [this version](https://github.com/roytseng-tw/Detectron.pytorch/tree/8315af319cd29b8884a7c0382c4700a96bf35bbc).
 
+## Installation, training and testing
+
+Prepare and run detectron according to [ORIREADME.md](ORIREADME.md).  
+
 ## Implementation
 
 Since loading images and packaging annotations into roidb are in different stages in this code, implementing InstaBoost is a little complex. 
