@@ -25,7 +25,7 @@ and adding
 
 ## Configurations
 
-4x configurations are available in [mmdet/InstaBoost_configs](mmdet/InstaBoost_configs).
+4x configurations are available in [InstaBoost_configs](InstaBoost_configs).
 
 ## Results and models
 
