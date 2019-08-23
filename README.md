@@ -15,17 +15,19 @@ The detail implementation can be found [`here`](https://github.com/GothicAi/Inst
 
 ## Quick Start
 
-Currently we have integrated InstaBoost into two open implementations: [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
+Currently we have integrated InstaBoost into three open implementations: [mmdetection](https://github.com/open-mmlab/mmdetection), [detectron](https://github.com/roytseng-tw/Detectron.pytorch) and [yolact](https://github.com/dbolya/yolact).
 
 * **mmdetection:** Checkout [mmdetection](mmdetection).  
 
 * **detectron:** Checkout [detectron](detectron). 
 
+* **yolact:** Checkout [yolact](yolact)
+
 *Since these two frameworks may continue updating, codes in this repo may be a little different from their current repo.*
 
 ## Use InstaBoost In Your Project
 
-It is easy to integrate InstaBoost into your framework. You can refer to instructions of our implementations [here](mmdetection#implementation) and [here](detectron#implementation).
+It is easy to integrate InstaBoost into your framework. You can refer to instructions of our implementations [here](mmdetection#implementation), [here](detectron#implementation) and [here](yolact#implementation)
 
 ## Setup InstaBoost Configurations
 
@@ -47,9 +49,9 @@ journal={arXiv preprint arXiv:1908.07801},
 year = {2019}
 }
 ```
-Please also cite [mmdetection](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch) if you use the corresponding codes.
+Please also cite [mmdetection](https://github.com/open-mmlab/mmdetection), [detectron](https://github.com/roytseng-tw/Detectron.pytorch) and [yolact](https://github.com/dbolya/yolact) if you use the corresponding codes.
 
 
 ## Acknowledgement
 
-Our detection and instance segmentation framework is based on [mmdetecion](https://github.com/open-mmlab/mmdetection) and [detectron](https://github.com/roytseng-tw/Detectron.pytorch).
+Our detection and instance segmentation framework is based on [mmdetecion](https://github.com/open-mmlab/mmdetection), [detectron](https://github.com/roytseng-tw/Detectron.pytorch) and [yolact](https://github.com/dbolya/yolact).
