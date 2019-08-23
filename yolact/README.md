@@ -1,6 +1,6 @@
 # InstaBoost on yolact
 
-Codes in this folder is an implementation of InstaBoost for yolact of [this version](https://github.com/dbolya/yolact).
+Codes in this folder is an implementation of InstaBoost for yolact of [this version](https://github.com/dbolya/yolact/tree/29e809e563d0c3e6c47c5c6716b8cc81686a2b24).
 
 ## Installation, training and testing
 
