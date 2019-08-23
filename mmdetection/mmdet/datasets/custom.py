@@ -10,7 +10,7 @@ from .transforms import (ImageTransform, BboxTransform, MaskTransform,
 from .utils import to_tensor, random_scale
 from .extra_aug import ExtraAugmentation
 
-from InstaBoost import get_new_data, InstaBoostConfig
+from instaboost import get_new_data, InstaBoostConfig
 
 class CustomDataset(Dataset):
     """Custom dataset for detection.

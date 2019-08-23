@@ -8,7 +8,7 @@ This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instan
 We implement our method on Python 3.5. To install InstaBoost, use this command. 
 
 ```
-pip install InstaBoost
+pip install instaboost
 ```
 
 The detail implementation can be found [`here`](https://github.com/GothicAi/InstaBoost-pypi).

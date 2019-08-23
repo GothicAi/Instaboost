@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 from .config import cfg
 from pycocotools import mask as maskUtils
-import InstaBoost
+from instaboost import get_new_data, InstaBoostConfig
 
 def get_label_map():
     if cfg.dataset.label_map is None:
@@ -119,7 +119,7 @@ class COCODetection(data.Dataset):
         assert osp.exists(path), 'Image path does not exist: {}'.format(path)
         img = cv2.imread(path)
         
-        target, img = InstaBoost.get_new_data(target, img, None, background=None)
+        target, img = get_new_data(target, img, None, background=None)
 
         # Separate out crowd annotations. These are annotations that signify a large crowd of
         # objects of said class, where there is no annotation for each individual object. Both

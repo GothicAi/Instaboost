@@ -9,7 +9,7 @@ Besides, InstaBoost should be installed before running the code.
 We suggest using pip to install InstaBoost.
 
 ``` shell
-pip install InstaBoost 
+pip install instaboost 
 ```
 
 ## Implementation

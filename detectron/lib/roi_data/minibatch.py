@@ -5,7 +5,7 @@ from core.config import cfg
 import utils.blob as blob_utils
 import roi_data.rpn
 
-from InstaBoost import get_new_data, InstaBoostConfig
+from instaboost import get_new_data, InstaBoostConfig
 from datasetsAug.roidb import combined_roidb_for_training
 from pycocotools.coco import COCO
 coco = COCO('data/coco/annotations/instances_train2017.json')
