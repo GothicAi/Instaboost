@@ -52,7 +52,7 @@ Clone the repo:
 
 ```
 git clone https://github.com/GothicAi/Instaboost.git
-cd detectron
+cd Instaboost/detectron
 ```
 
 ### Requirements
