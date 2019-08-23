@@ -29,7 +29,7 @@ Here's a look at our current results for our base model (33 fps on a Titan Xp an
    ```
  - Clone this repository and enter it:
    ```Shell
-   git clone https://github.com/dbolya/yolact.git
+   git clone https://github.com/GothicAi/Instaboost.git
    cd yolact
    ```
  - If you'd like to train YOLACT, download the COCO dataset and the 2014/2017 annotations. Note that this script will take a while and dump 21gb of files into `./data/coco`.
