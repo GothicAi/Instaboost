@@ -23,7 +23,7 @@ Currently we have integrated InstaBoost into three open implementations: [mmdete
 
 * **yolact:** Checkout [yolact](yolact)
 
-*Since these two frameworks may continue updating, codes in this repo may be a little different from their current repo.*
+*Since these frameworks may continue updating, codes in this repo may be a little different from their current repo.*
 
 ## Use InstaBoost In Your Project
 
