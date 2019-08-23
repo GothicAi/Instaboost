@@ -21,7 +21,7 @@ git clone https://github.com/GothicAi/Instaboost.git
 c. Compile cuda extensions.
 
 ```shell
-cd mmdetection
+cd Instaboost/mmdetection
 pip install cython  # or "conda install cython" if you prefer conda
 ./compile.sh  # or "PYTHON=python3 ./compile.sh" if you use system python3 without virtual environments
 ```
