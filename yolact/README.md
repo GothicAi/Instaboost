@@ -19,9 +19,9 @@ Only few lines should be modified to put InstaBoost into use.
 
 Only [data/coco.py](data/coco.py) should be changed.
   
-[line 11](data/coco.py#L11) Import InstaBoost.
+[line 11](data/coco.py#L11) Importing InstaBoost.
 
-[line 115-120](data/coco.py#L115) These lines arte originally located at [line 137-144](data/coco.py#L137). They are put here because the InstaBoost function `get_new_data` needs both annotation and image.
+[line 115-120](data/coco.py#L115) These lines are originally located at [line 137-144](data/coco.py#L137). They are put here because the InstaBoost function `get_new_data` needs both the annotation and the image.
 
 [line 122](data/coco.py#L122) Run the InstaBoost function and get new image and annotation. Both the variables `target` and `img` are acquired using the official COCO Python API.
 
