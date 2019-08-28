@@ -15,6 +15,8 @@ The detail implementation can be found [`here`](https://github.com/GothicAi/Inst
 
 ## Quick Start
 
+Video demo for InstaBoost: https://www.youtube.com/watch?v=iFsmmHUGy0g
+
 Currently we have integrated InstaBoost into three open implementations: [mmdetection](https://github.com/open-mmlab/mmdetection), [detectron](https://github.com/roytseng-tw/Detectron.pytorch) and [yolact](https://github.com/dbolya/yolact).
 
 * **mmdetection:** Checkout [mmdetection](mmdetection).  
