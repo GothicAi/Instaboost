@@ -61,10 +61,11 @@ class COCODetection(data.Dataset):
 
     def __init__(self, image_path, info_file, transform=None,
                  target_transform=COCOAnnotationTransform(),
-                 dataset_name='MS COCO', has_gt=True):
+                 dataset_name='MS COCO', has_gt=True,is_train=True):
         # Do this here because we have too many things named COCO
         from pycocotools.coco import COCO
         
+        self.is_train=is_train
         self.root = image_path
         self.coco = COCO(info_file)
         
@@ -95,7 +96,7 @@ class COCODetection(data.Dataset):
     def pull_item(self, index):
         """
         Args:
-            index (int): Index
+            index (int): Indexcolor_cache
         Returns:
             tuple: Tuple (image, target, masks, height, width, crowd).
                    target is the object returned by ``coco.loadAnns``.
@@ -119,7 +120,8 @@ class COCODetection(data.Dataset):
         assert osp.exists(path), 'Image path does not exist: {}'.format(path)
         img = cv2.imread(path)
         
-        target, img = get_new_data(target, img, None, background=None)
+        if self.is_train:
+            target, img = get_new_data(target, img, None, background=None)
 
         # Separate out crowd annotations. These are annotations that signify a large crowd of
         # objects of said class, where there is no annotation for each individual object. Both

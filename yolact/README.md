@@ -17,15 +17,19 @@ pip install instaboost
 Integrating InstaBoost into yolact is quite simple.
 Only few lines should be modified to put InstaBoost into use.
 
-Only [data/coco.py](data/coco.py) should be changed.
+[data/coco.py](data/coco.py), [train.py](train.py) and [eval.py](eval.py) should be changed.
   
-[line 11](data/coco.py#L11) Importing InstaBoost.
+[coco.py/line 11](data/coco.py#L11) imports InstaBoost.
 
-[line 115-120](data/coco.py#L115-L120) These lines are originally located at [line 137-144](data/coco.py#L137-L144). They are put here because the InstaBoost function `get_new_data` needs both the annotation and the image.
+[coco.py/line 68](data/coco.py#L68) assigns the value of `is_train`.
 
-[line 122](data/coco.py#L122) Run the InstaBoost function and get new image and annotation. Both the variables `target` and `img` are acquired using the official COCO Python API.
+[coco.py/line 116-121](data/coco.py#L116-L121) These lines are originally located at [line 139-146](data/coco.py#L137-L144). They are put here because the InstaBoost function `get_new_data` needs both the annotation and the image.
 
+[coco.py/line 123-124](data/coco.py#L123-L124) checks if it's training or evaluating. When training, the program runs the InstaBoost function and gets new image and annotation. Both the variables `target` and `img` are acquired using the official COCO Python API.
 
+[train.py/line 130](train.py#L130) and [train.py/line 134](train.py#L134) assign `True` to the variable of `is_train`.
+
+[eval.py/line](eval.py#L) assigns `False` to the variable of `is_train`.
 ## Results and models
 
 For your conveinience of evaluation and comparison, we report the evaluation number on COCO val below. In our paper, the numbers are obtained from test-dev.
