@@ -4,14 +4,15 @@ This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instan
 
 ## Install InstaBoost
 
-1. Requirements  
-We implement our method on Python 3.5. To install InstaBoost, use this command. 
+To install InstaBoost, use this command. 
 
 ```
 pip install instaboost
 ```
 
 The detail implementation can be found [`here`](https://github.com/GothicAi/InstaBoost-pypi).
+
+***Because InstaBoost depends on matting package [here](https://github.com/GothicAi/cython-global-matting), we highly recommend users to use python3.5 or 3.6, OpenCV 2.4 to avoid some errors. Envrionment setting instructions can be found [here](https://github.com/GothicAi/cython-global-matting#environment-settings-linux).***
 
 ## Quick Start
 
