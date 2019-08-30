@@ -27,9 +27,9 @@ Only few lines should be modified to put InstaBoost into use.
 
 [coco.py/line 123-124](data/coco.py#L123-L124) checks if it's training or evaluating. When training, the program runs the InstaBoost function and gets new image and annotation. Both the variables `target` and `img` are acquired using the official COCO Python API.
 
-[train.py/line 130](train.py#L130) and [train.py/line 134](train.py#L134) assign `True` to the variable of `is_train`.
+[train.py/line 134](train.py#L134) and [train.py/line 140](train.py#L140) assign `True` to the variable of `is_train`.
 
-[eval.py/line](eval.py#L) assigns `False` to the variable of `is_train`.
+[eval.py/line 1006](eval.py#L1006) assigns `False` to the variable of `is_train`.
 ## Results and models
 
 For your conveinience of evaluation and comparison, we report the evaluation number on COCO val below. In our paper, the numbers are obtained from test-dev.
