@@ -30,7 +30,7 @@ Currently we have integrated InstaBoost into three open implementations: [mmdete
 
 ## Use InstaBoost In Your Project
 
-It is easy to integrate InstaBoost into your framework. You can refer to instructions of our implementations [here](mmdetection#implementation), [here](detectron#implementation) and [here](yolact#implementation)
+It is easy to integrate InstaBoost into your framework. You can refer to instructions of our implementations on [mmdetection](mmdetection#implementation), [detectron](detectron#implementation) and [yolact](yolact#implementation)
 
 ## Setup InstaBoost Configurations
 
