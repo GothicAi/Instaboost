@@ -33,7 +33,7 @@ For your conveinience of evaluation and comparison, we report the evaluation num
 | :-------------: | :-------------: |      :--------:      | :-----: |      :----:       |      :-----:       | :-----------------: |
 |    ×    |    Mask R-CNN   |       R-50-FPN       |   1x    |  37.7  |  33.7  | - |
 |    ×    |    Mask R-CNN   |       R-50-FPN       |   2x    |  38.7  |  34.6  | - |
-|    ×    |    Mask R-CNN   |       R-50-FPN       |   3x    |  38.0  |  33.9  | [Baidu]() / [Google]() |
+|    ×    |    Mask R-CNN   |       R-50-FPN       |   3x    |  38.0  |  33.9  |[Baidu](https://pan.baidu.com/s/1vVBCV4QpebTPvLQs-NnK2Q) / [Google](https://drive.google.com/file/d/1dOSBQrQ853gDzmD8cA5HfOUep3Z18pXW/view?usp=sharing)|
 |    √    |    Mask R-CNN   |       R-50-FPN       |   4x    |**40.3**|**35.7**|[Baidu](https://pan.baidu.com/s/1PSUFALTocC4axSjSbwqSjA) / [Google](https://drive.google.com/file/d/14183nkrToHkjXcWm14XUIQc7FgDDvb93/view?usp=sharing)|
 |    ×    |    Mask R-CNN   |       R-101-FPN      |   1x    |  40.0  |  35.9  | - |
 |    √    |    Mask R-CNN   |       R-101-FPN      |   4x    |**42.8**|**37.5**|[Baidu](https://pan.baidu.com/s/1JYA0MFUnNcWxPR8FfplFEw) / [Google](https://drive.google.com/file/d/1PPPJTl14VQj-LyA_cueDFHr8sibO2AQg/view?usp=sharing)|
