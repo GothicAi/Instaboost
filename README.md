@@ -5,7 +5,7 @@ This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instan
 ## Install InstaBoost
 
 ### Original version
-To install original InstaBoost, use this command.  
+To install original InstaBoost, use this command.  *If you successfully install and import it in python, you are really lucky!*
 
 ```
 pip install instaboost
