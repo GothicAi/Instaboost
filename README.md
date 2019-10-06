@@ -4,15 +4,38 @@ This repository is implementation of ICCV2019 paper "InstaBoost: Boosting Instan
 
 ## Install InstaBoost
 
-To install InstaBoost, use this command. 
+### Original version
+To install original InstaBoost, use this command.  
 
 ```
 pip install instaboost
+```
+We strongly recommend install it using conda
+
+```
+conda create -n instaboost -python=3.x
+conda activate instaboost
+conda install -c salilab opencv-nopython        # opencv2
+conda install -c serge-sans-paille gcc_49       # you need to use conda's gcc instead of system's
+ln -s ~/miniconda3/envs/instaboost/bin/g++-4.9 ~/miniconda3/envs/instaboost/bin/g++   #link to bin
+ln -s ~/miniconda3/envs/instaboost/bin/gcc-4.9 ~/miniconda3/envs/instaboost/bin/gcc   #link to bin
+pip install cython numpy
+pip install opencv-mat
+```
+
+### Easy install version
+***Note: If you cannot install instaboost successfully using conda, we provide a simpler instaboost that do not need matting. The final results is 0.1 mAP lower than the original one, but we highly recommend it.***
+```
+pip install instaboostfast
+# in python
+>>> import instaboostfast as instaboost
 ```
 
 The detail implementation can be found [`here`](https://github.com/GothicAi/InstaBoost-pypi).
 
 ***Because InstaBoost depends on matting package [here](https://github.com/GothicAi/cython-global-matting), we highly recommend users to use python3.5 or 3.6, OpenCV 2.4 to avoid some errors. Envrionment setting instructions can be found [here](https://github.com/GothicAi/cython-global-matting#environment-settings-linux).***
+
+
 
 ## Quick Start
 
