@@ -13,7 +13,7 @@ pip install instaboost
 We strongly recommend install it using conda
 
 ```
-conda create -n instaboost -python=3.x
+conda create -n instaboost python=3.6
 conda activate instaboost
 conda install -c salilab opencv-nopython        # opencv2
 conda install -c serge-sans-paille gcc_49       # you need to use conda's gcc instead of system's
