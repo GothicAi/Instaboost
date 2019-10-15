@@ -21,6 +21,7 @@ ln -s ~/miniconda3/envs/instaboost/bin/g++-4.9 ~/miniconda3/envs/instaboost/bin/
 ln -s ~/miniconda3/envs/instaboost/bin/gcc-4.9 ~/miniconda3/envs/instaboost/bin/gcc   #link to bin
 pip install cython numpy
 pip install opencv-mat
+pip install instaboost
 ```
 
 ### Easy install version
